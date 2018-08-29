@@ -8,13 +8,17 @@ vux-uploads 是一个 vue 的上传组件，是对[vux](https://github.com/airyl
 
 ## 示例
 
-![示例](https://github.com/wxingheng/vux-uploads/blob/master/QQ%E5%9B%BE%E7%89%8720180829144425.png)
-
 ![示例](https://github.com/wxingheng/vux-uploads/blob/master/QQ%E6%88%AA%E5%9B%BE20180829144310.png)
+
+![示例](https://github.com/wxingheng/vux-uploads/blob/master/QQ%E5%9B%BE%E7%89%8720180829144425.png)
 
 ![示例](https://github.com/wxingheng/vux-uploads/blob/master/QQ%E6%88%AA%E5%9B%BE20180829144346.png)
 
+![示例](https://github.com/wxingheng/vux-uploads/blob/master/QQ%E6%88%AA%E5%9B%BE20180829144400.png)
+
 ![示例](https://github.com/wxingheng/vux-uploads/blob/master/QQ%E6%88%AA%E5%9B%BE20180829144413.png)
+
+
 
 ## vux-uploads 的特点
 
