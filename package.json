@@ -1,12 +1,13 @@
 {
   "name": "vux-uploads",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "./src/main.js",
   "description": "vux-uploads Project, the component to upload images",
   "author": "wuxh <wxingheng@outlook.com>",
   "keywords": [
     "vux-uploader",
     "vux-upload",
+    "vux-uploads",
     "vux-uploas",
     "vux",
     "vue",
