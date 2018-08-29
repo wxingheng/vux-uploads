@@ -6,6 +6,20 @@ vux-uploads 是一个 vue 的上传组件，是对[vux](https://github.com/airyl
 在 [vux-uploader](https://github.com/greedying/vux-uploader) 的基础上调整，新增 [预览] [删除] [压缩] 等。
 因为 vux 并没有对[weui](https://github.com/weui/weui)的[uploader 组件](https://weui.io/#uploader)进行封装，理由见[vux issue 682](https://github.com/airyland/vux/issues/682)，但这又是一个常见需求。在使用 vux 过程中，作者实现了这个组件，现整理开源出来，命名为 vux-uploads
 
+## 示例
+
+![示例](https://github.com/wxingheng/vux-uploads/blob/master/QQ%E6%88%AA%E5%9B%BE20180829144310.png)
+
+![示例](https://github.com/wxingheng/vux-uploads/blob/master/QQ%E5%9B%BE%E7%89%8720180829144425.png)
+
+![示例](https://github.com/wxingheng/vux-uploads/blob/master/QQ%E6%88%AA%E5%9B%BE20180829144346.png)
+
+![示例](https://github.com/wxingheng/vux-uploads/blob/master/QQ%E6%88%AA%E5%9B%BE20180829144400.png)
+
+![示例](https://github.com/wxingheng/vux-uploads/blob/master/QQ%E6%88%AA%E5%9B%BE20180829144413.png)
+
+
+
 ## vux-uploads 的特点
 
 - 基于 vux，适合 vux 项目
