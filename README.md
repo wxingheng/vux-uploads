@@ -45,7 +45,13 @@ vux-uploads 是一个 vue 的上传组件，是对[vux](https://github.com/airyl
 npm install vux-uploads --save
 ```
 
-3. 使用`vux-uploads`
+3. 安装`babel-preset-es2015`
+
+```
+npm install babel-preset-es2015 --save
+```
+
+4. 使用`vux-uploads`
 
 ```javascript
 // 引入组件
@@ -63,6 +69,19 @@ export default {
   }
   ...
 }
+```
+
+```javascript
+// main.js
+
+// 引入weui的样式
+import './assets/style/weui.css'
+// vux 全局组件的注册
+import {
+  Toast,
+  ToastPlugin,
+  LoadingPlugin,
+} from 'vux'
 ```
 
 ```javascript
@@ -201,7 +220,7 @@ export default {
 ## 待实现事项，欢迎 PR
 
 - [ ] 上传进度实时显示
-- [ ] 上传错误时，图片显示错误样式
+- [x] 上传错误时，图片显示错误样式
 - [x] 一次选择，多图片上传
 - [x] 上传图片的删除
 - [x] 上传图片预览 
