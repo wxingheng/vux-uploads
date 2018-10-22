@@ -75,7 +75,7 @@ export default {
 // main.js
 
 // 引入weui的样式
-import './assets/style/weui.css'
+// import './assets/style/weui.css' 将这个文件直接在组件引入，避免额外的依赖。当前可以不引入
 // vux 全局组件的注册
 import {
   Toast,
@@ -221,7 +221,7 @@ import {
 
 - [ ] 上传进度实时显示
 - [x] 上传错误时，图片显示错误样式
-- [x] 一次选择，多图片上传
+- [ ] 一次选择，多图片上传(为了兼容少数安卓手机的兼容性问题，暂时会退到单张上传。)
 - [x] 上传图片的删除
 - [x] 上传图片预览 
 - [x] 上传图片时，附带 post 参数

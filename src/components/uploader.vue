@@ -3,7 +3,9 @@
     <div class="weui-cell__bd">
       <div class="weui-uploader">
         <div v-show="showHeader" class="weui-uploader__hd">
-          <p class="weui-uploader__title"> {{ title }} </p>
+          <slot name="label">
+            <p class="weui-uploader__title"> {{ title }} </p>
+           </slot>
           <div v-show="showHeader && showTip" class="weui-uploader__info">
             {{ images.length }} / {{ max }}
           </div>
@@ -13,7 +15,7 @@
             <uploader-item v-for="(image, i) in images" :render-src="image.src" :key="image.id" @click.native="preview(image, i)"></uploader-item>
           </ul>
           <div v-show="!readonly && images.length < max" class="weui-uploader__input-box" @click="add">
-            <input v-if="!handleClick" ref="file" class="weui-uploader__input"  multiple="multiple" type="file" accept="image/*" :capture="showCapture" @change="change">
+            <input v-if="!handleClick" ref="file" class="weui-uploader__input"  type="file" accept="image/*" :capture="showCapture" @change="change">
           </div>
         </div>
         <div >
@@ -28,6 +30,8 @@ import UploaderItem from "./uploader-item.vue";
 import axios from "axios";
 import weui from "weui.js";
 import lrz from "lrz";
+import '../assets/style/weui.css'
+
 
 export default {
   props: {
@@ -88,6 +92,12 @@ export default {
     describe: {
       type: String,
       default: ""
+    },
+    headers: {
+      type: Object,
+      default: function(){
+        return {}
+      }
     }
   },
   components: {
@@ -155,7 +165,11 @@ export default {
               if (this.$vux && this.$vux.loading) {
                 this.$vux.loading.show("正在上传");
               }
-              postList.push(axios.post(this.uploadUrl, formData));
+              postList.push(
+                axios.post(this.uploadUrl, formData, {
+                  headers: this.headers
+                })
+              );
               resultCount--;
             } else {
               this.$emit("upload-image", formData);
