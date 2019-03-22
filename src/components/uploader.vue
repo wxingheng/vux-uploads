@@ -119,20 +119,23 @@ export default {
     },
     preview(image, i) {
       // 暂未实现，可以捕捉preview事件自己实现
-      // this.$emit("preview", image);
-      //  url = url.match(/url\((.*?)\)/)[1].replace(/"/g, "");
-      let url = image.src;
-      var gallery = weui.gallery(url, {
-        className: "custom-classname",
-        onDelete: () => {
-          gallery.hide();
-          this.images.splice(i, 1);
-          // if(confirm('确定删除该图片？')){ console.log('删除'); }
-          // gallery.hide(function() {
-          //     console.log('`gallery` has been hidden');
-          // });
-        }
-      });
+      if (this.handleClick) {
+        this.$emit("preview", image);
+      } else {
+        //  url = url.match(/url\((.*?)\)/)[1].replace(/"/g, "");
+        const url = image.src;
+        const gallery = weui.gallery(url, {
+          className: "custom-classname",
+          onDelete: () => {
+            gallery.hide();
+            this.images.splice(i, 1);
+            // if(confirm('确定删除该图片？')){ console.log('删除'); }
+            // gallery.hide(function() {
+            //     console.log('`gallery` has been hidden');
+            // });
+          }
+        });
+      }
     },
     // 适用于action的情况
     change() {
