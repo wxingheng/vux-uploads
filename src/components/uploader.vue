@@ -30,7 +30,6 @@ import UploaderItem from "./uploader-item.vue";
 import axios from "axios";
 import weui from "weui.js";
 import lrz from "lrz";
-// import '../assets/style/weui.css'
 
 
 export default {
