@@ -2407,6 +2407,11 @@ dom-serializer@0:
     domelementtype "^2.0.1"
     entities "^2.0.0"
 
+dom-walk@^0.1.0:
+  version "0.1.2"
+  resolved "https://registry.npmjs.org/dom-walk/-/dom-walk-0.1.2.tgz#0c548bef048f4d1f2a97249002236060daa3fd84"
+  integrity sha512-6QvTW9mrGeIegrFXdtQi9pk7O/nSK6lSdXW2eqUspN5LWD7UTji2Fqw5V2YLjBpHEoU9Xl/eUWNpDeZvoyOv2w==
+
 domain-browser@^1.1.1:
   version "1.2.0"
   resolved "https://registry.npmjs.org/domain-browser/-/domain-browser-1.2.0.tgz#3d31f50191a6749dd1375a7f522e823d42e54eda"
@@ -3201,6 +3206,14 @@ glob@^7.0.0, glob@^7.0.3, glob@^7.1.2, glob@^7.1.3:
     minimatch "^3.0.4"
     once "^1.3.0"
     path-is-absolute "^1.0.0"
+
+global@^4.4.0:
+  version "4.4.0"
+  resolved "https://registry.npmjs.org/global/-/global-4.4.0.tgz#3e7b105179006a323ed71aafca3e9c57a5cc6406"
+  integrity sha512-wv/LAoHdRE3BeTGz53FAamhGlPLhlssK45usmGFThIi4XqnBmjKQ16u+RNbP7WvigRZDxUsM0J3gcQ5yicaL0w==
+  dependencies:
+    min-document "^2.19.0"
+    process "^0.11.10"
 
 globals@^9.18.0:
   version "9.18.0"
@@ -4529,6 +4542,13 @@ mimic-fn@^1.0.0:
   version "1.2.0"
   resolved "https://registry.npmjs.org/mimic-fn/-/mimic-fn-1.2.0.tgz#820c86a39334640e99516928bd03fca88057d022"
   integrity sha512-jf84uxzwiuiIVKiOLpfYk7N46TSy8ubTonmneY9vrpHNAnp0QBt2BxWV9dO3/j+BoVAb+a5G6YDPW3M5HOdMWQ==
+
+min-document@^2.19.0:
+  version "2.19.0"
+  resolved "https://registry.npmjs.org/min-document/-/min-document-2.19.0.tgz#7bd282e3f5842ed295bb748cdd9f1ffa2c824685"
+  integrity sha1-e9KC4/WELtKVu3SM3Z8f+iyCRoU=
+  dependencies:
+    dom-walk "^0.1.0"
 
 minimalistic-assert@^1.0.0, minimalistic-assert@^1.0.1:
   version "1.0.1"
@@ -7548,11 +7568,12 @@ vux-loader@^1.0.56:
     webpack-merge "^1.1.2"
     webpack-sources "^0.1.2"
 
-vux-uploads@^1.0.9:
-  version "1.0.9"
-  resolved "https://registry.npmjs.org/vux-uploads/-/vux-uploads-1.0.9.tgz#49535767527a3aca443cca6ec311fe19a760014c"
-  integrity sha512-JP/TD6KzdDV8WojeKaMOpMHlAFHt+Fr1YaUnT5Ip+ohJir3kYtMj6Es+ROIEw0jNVZscER8mhHPzsIVvWtLlAg==
+vux-uploads@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.npmjs.org/vux-uploads/-/vux-uploads-1.1.0.tgz#bf17423901997a69b236674daad27b228f9b0f33"
+  integrity sha512-PjBnxpAlUJKlWfgci94jWFiVfbY7LmFD97m4bfbWroI6G8KKdqWtoXTFTIi2WqzwBIAUXDUXe/hXjhoE8eES4A==
   dependencies:
+    global "^4.4.0"
     lrz "^4.9.40"
     vue "^2.2.1"
     vux "^2.1.1-rc.6"
