@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>文件上传</title>
+</head>
+
+<body>
+    <h2>文件上传</h2>
+    <form class="form-horizontal col-sm-6" enctype='multipart/form-data' method='post' action='javascript:;' role="form"
+        id="frmUploadFile">
+        <div class="form-group inline">
+            <div class="col-sm-4 inline">
+                <input type="file" name="files" class="form-control " id="bloodBankLogo" />
+            </div>
+            <button onclick="uploadFile()">上传</button>
+        </div>
+    </form>
+    <script src="./jquery-2.1.1.js"></script>
+    <script>
+        function uploadFile() {
+            console.log('点击上传...');
+            var formData = new FormData($('#frmUploadFile')[0]);
+            $.ajax({
+                url: '../upload',
+                type: 'POST',
+                data: formData,
+                async: false,
+                cache: false,
+                contentType: false,
+                processData: false,
+                success: function (v) {
+                    if (v.code === 200) {
+                        alert("图片上传成功：" + v.msg.url)
+                    }
+                }
+            })
+        }
+    </script>
+
+</body>
+
+</html>
